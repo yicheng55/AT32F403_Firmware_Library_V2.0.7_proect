@@ -1,0 +1,23 @@
+# Prerequisites
+*.d
+*.bak
+*.TMP
+desktop.ini
+
+# Object files
+# Objects/
+objects/
+at_start_f403/examples/usart/interrupt/mdk_v5/objects/
+*.o
+*.ko
+*.obj
+*.crf
+*.dep
+*.sct
+
+# Linker output
+listings/
+at_start_f403/examples/usart/interrupt/mdk_v5/listings/
+*.lst
+*.map
+*.exp
