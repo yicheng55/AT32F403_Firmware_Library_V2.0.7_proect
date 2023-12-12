@@ -1,0 +1,15 @@
+--cpu Cortex-M4.fp
+".\objects\at32f403_clock.o"
+".\objects\at32f403_int.o"
+".\objects\main.o"
+".\objects\at32f403_board.o"
+".\objects\at32f403_gpio.o"
+".\objects\at32f403_crm.o"
+".\objects\at32f403_usart.o"
+".\objects\at32f403_misc.o"
+".\objects\system_at32f403.o"
+".\objects\startup_at32f403.o"
+--strict --scatter ".\objects\interrupt.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listings\interrupt.map" -o .\objects\interrupt.axf
