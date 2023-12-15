@@ -5,9 +5,8 @@
 desktop.ini
 
 # Object files
-# Objects/
-objects/
-at_start_f403/examples/usart/interrupt/mdk_v5/objects/
+#Objects/
+objects
 *.o
 *.ko
 *.obj
@@ -16,8 +15,7 @@ at_start_f403/examples/usart/interrupt/mdk_v5/objects/
 *.sct
 
 # Linker output
-listings/
-at_start_f403/examples/usart/interrupt/mdk_v5/listings/
+listings
 *.lst
 *.map
 *.exp
