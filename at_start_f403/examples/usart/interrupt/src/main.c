@@ -147,14 +147,19 @@ int main(void)
 {
   system_clock_config();
   at32_board_init();
+  uart_print_init(115200);
+  printf(": test start...\r\n");
   usart_configuration();
+
   at32_led_toggle(LED2);    
   /* wait until end of transmission from usart2 to usart3 */
   while(usart3_rx_counter < usart2_tx_buffer_size);
   at32_led_toggle(LED3);
+  printf(": at32_led_toggle(LED3)...\r\n");
   /* wait until end of transmission from usart3 to usart2 */
   while(usart2_rx_counter < usart3_tx_buffer_size);
   at32_led_toggle(LED4);
+  printf(": at32_led_toggle(LED4)...\r\n");
   while(1)
   {
 
@@ -166,6 +171,7 @@ int main(void)
       at32_led_toggle(LED3);
       at32_led_toggle(LED4);
       delay_sec(1);
+      printf(": at32_led_toggle(all)...\r\n");
     }
   }
 }
